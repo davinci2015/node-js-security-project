@@ -1,0 +1,16 @@
+h1 Time consuming tasks
+hr
+.panel.panel-info
+	.panel-heading
+		h3.panel-title Description
+	.panel-body
+		| Calculating Fibonacci nth-number
+
+div.col-md-6
+	form
+		div.form-group
+			input.form-control(type="number", placeholder="Input", ng-model="num")
+			br
+		button.btn.btn-success(ng-click="submit()") Submit
+
+	h3 {{data}}

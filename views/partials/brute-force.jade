@@ -1,0 +1,14 @@
+h1 Brute Force 
+hr
+.panel.panel-info
+	.panel-heading
+		h3.panel-title Description
+	.panel-body
+		| Mitigating brute force attack with npm express-brute package
+h5 Click button to execute <strong> POST </strong> request on /login endpoint
+br
+button.btn.btn-success(ng-click="attack()") ATTACK
+br
+br
+h4(ng-repeat="r in result")
+	{{r}}

@@ -1,0 +1,16 @@
+h1 Server Side Javascript Injection
+hr
+.panel.panel-info
+	.panel-heading
+		h3.panel-title Description
+	.panel-body
+		| When <strong>eval()</strong>, <strong>setTimeout()</strong>, <strong>setInterval()</strong>, are used to process user provided inputs, it can be exploited by an attacker to inject and execute malicious JavaScript code on server.
+
+div.col-md-6
+	form(action="/api/ssji", method="POST")
+		div.form-group
+			input.form-control(type="text", name="text", placeholder="Insert malicious code")
+			br
+		button.btn.btn-success(type="submit") Submit
+
+	h3 {{data}}

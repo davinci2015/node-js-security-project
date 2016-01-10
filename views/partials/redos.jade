@@ -1,0 +1,26 @@
+h1 ReDoS
+hr
+.panel.panel-info
+	.panel-heading
+		h3.panel-title Description
+	.panel-body
+		|The regular expression denial of service (ReDoS) is an algorithmic complexity attack that produces a denial-of-service by providing a regular expression that takes a very long time to evaluate. The attack exploits the fact that most regular expression implementations have exponential time worst case complexity: the time taken can grow exponentially in relation to input size. An attacker can thus cause a program to spend an effectively infinite amount of time processing by providing such a regular expression, either slowing down or becoming unresponsive. 
+		br 
+		br
+		| We will use safe-regex to detect potentially catastrophic exponential-time regular expressions. Also we will see how much time it's needed to validate input.
+		br 
+		br
+		| Used Regex for checking email - <strong> /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/ </strong>
+		br
+		| Bad input: jjjjjjjjjjjjjjjjjjjjjjjjjjjj@ccccccccccccccccccccccccccccc.555555555555555555555555555555555555555555555555555555{
+
+div.col-md-6
+	form
+		div.form-group
+			input.form-control(type="text", placeholder="Enter email", ng-model="text")
+			br
+		button.btn.btn-success(ng-click="submit()") Test E-mail
+
+	h3 {{data}}
+	div(ng-show="done")
+		h4 Valid email: {{valid}}

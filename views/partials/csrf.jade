@@ -1,0 +1,17 @@
+h1 Cross site request forgery
+hr
+div.panel.panel-info
+	div.panel-heading
+		h3.panel-title CSRF Token
+	div.panel-body
+		p Mitigating CSRF attack with npm <strong>csurf</strong> package
+		p Used token: #{csrfToken}
+
+div.col-md-6
+	form(action="/api/csrf", method="POST")
+		div.form-group
+			input(id="token", type="hidden", name="_csrf", value="#{csrfToken}")
+			input.form-control(type="text", placeholder="Input")
+			br
+		button.btn.btn-success(ng-click="submit()", type="submit") Submit
+
