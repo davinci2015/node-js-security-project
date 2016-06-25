@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp', [])
+angular.module('myApp', ['ngRoute'])
 .config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/brute-force', {

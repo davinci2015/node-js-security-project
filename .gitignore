@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+npm-debug.log*
 
 # Runtime data
 pids
@@ -23,9 +24,13 @@ coverage
 build/Release
 
 # Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-bower_components
+# Optional npm cache directory
+.npm
 
-public/js/lib/
+# Optional REPL history
+.node_repl_history
+
+# Bower
+bower_components

@@ -3,7 +3,7 @@
  * Module dependencies
  */
 
-var 	express 	   = require('express'),
+var 	express  = require('express'),
 	bodyParser   = require('body-parser'),
 	routes       = require('./routes'),
 	api          = require('./routes/api'),
@@ -13,7 +13,7 @@ var 	express 	   = require('express'),
 	cookieParser = require('cookie-parser'),
 	csrf         = require('csurf'),
 	prettyHrtime = require('pretty-hrtime'),
-	acc 		   = require('./accounts.json'),
+	acc 		 = require('./public/js/accounts.js'),
 	store        = new ExpressBrute.MemoryStore(); // stores state locally, don't use this in production 
 	bruteforce   = new ExpressBrute(store);
 
